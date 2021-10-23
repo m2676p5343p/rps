@@ -9,10 +9,12 @@ win_loss_arr = numpy.array([[False, False, True], #-- matrix to represent outcom
                             [False, True, False]])#-- True represents a player win
 
 inp = None #-- Input starts off un-initialised to activate while loop
-while inp is None: #-- This while loop will continue until there is valid input
+while True: #-- This while loop will continue until there is valid input
     inp = input("Input 1 for rock, 2 for paper, or 3 for scissors\n")
     if inp not in ('1', '2', '3'):
-        inp == None
+        continue
+    else:
+        break
 
 player_turn = int(inp) #-- Converts the string input into an integer
 
